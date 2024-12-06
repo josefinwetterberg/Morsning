@@ -21,7 +21,7 @@ let morseUrl = "https://api.funtranslations.com/translate/morse.json?text="+mors
     mainContent.appendChild(morseContainer) // add morsecode to a new div.
     
     let textContainer = document.createElement('div');
-    textContainer.textContent = "Translated text: " + morseCode.contents.text;
+    textContainer.textContent = "Översatt text: " + morseCode.contents.text;
 
     mainContent.appendChild(textContainer) // add translated text to a new div.
   })

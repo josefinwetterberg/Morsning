@@ -6,14 +6,16 @@
     <title>Morsning</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <main id="main-content">
-        <form action="code.html" method="get">
-            <button type="button" id="generate-button">Generera en morsning?</button>
-            <input type="text" name="translateToMorse" id="translateToMorse">
-            <button type="submit" id="submit-button">Översätt!</button>
-            <script src="index.js"></script>
-        </form>
-    </main>
+        <main id="main-content">
+            <form action="code.html" method="get">
+                <button type="button" id="generate-button">Generera en morsning?</button>
+                <input type="text" name="translateToMorse" id="translateToMorse" maxlength="25">
+                <p class="counter" id="charCounter">0/25</p>
+                <button type="submit" id="submit-button">Översätt!</button>
+            </form>
+        </main>
+    <script src="index.js"></script>
 </body>
 </html>

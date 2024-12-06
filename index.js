@@ -20,4 +20,19 @@ document.getElementById('generate-button').addEventListener('click', async () =>
   .catch((error) => {
       console.error("Error:", error);
   })
-})
+}) // generate hello function
+
+const inputField = document.getElementById('translateToMorse');
+const charCounter = document.getElementById('charCounter');
+const maxLength = inputField.maxLength;
+
+    inputField.addEventListener('input', () => {
+      const remaining = maxLength - inputField.value.length;
+      charCounter.textContent = `${remaining}/${maxLength}`;
+
+      if (remaining <= 10) {
+        charCounter.classList.add('warning');
+      } else {
+        charCounter.classList.remove('warning');
+      }
+    }) // character remaining function
