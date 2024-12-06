@@ -1,4 +1,4 @@
-/* const currentUrl = window.location.href;
+const currentUrl = window.location.href;
 
 const url = new URL(currentUrl);
 
@@ -18,8 +18,13 @@ let morseUrl = "https://api.funtranslations.com/translate/morse.json?text="+mors
     let morseContainer = document.createElement('div');
     morseContainer.textContent = morseCode.contents.translated;
 
-    mainContent.appendChild(morseContainer);
+    mainContent.appendChild(morseContainer) // add morsecode to a new div.
+    
+    let textContainer = document.createElement('div');
+    textContainer.textContent = "Translated text: " + morseCode.contents.text;
+
+    mainContent.appendChild(textContainer) // add translated text to a new div.
   })
   .catch((error) => {
     console.error("Error:", error);
-  }); */
+  });
