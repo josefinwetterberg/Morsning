@@ -22,6 +22,7 @@ document.getElementById('generate-button').addEventListener('click', async () =>
   })
 }) // generate hello function
 
+
 const inputField = document.getElementById('translateToMorse');
 const charCounter = document.getElementById('charCounter');
 const maxLength = inputField.maxLength;
@@ -36,3 +37,4 @@ const maxLength = inputField.maxLength;
         charCounter.classList.remove('warning');
       }
     }) // character remaining function
+

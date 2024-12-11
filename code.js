@@ -13,17 +13,19 @@ let morseUrl = "https://api.funtranslations.com/translate/morse.json?text="+mors
   .then((json) => {
     console.log(json);
     const morseCode = json; 
-    const mainContent = document.getElementById('mainMorse');
+    const mainContent = document.getElementById('code-sun');
 
     let morseContainer = document.createElement('div');
     morseContainer.textContent = morseCode.contents.translated;
+    morseContainer.classList.add('morse-text');
 
     mainContent.appendChild(morseContainer) // add morsecode to a new div.
     
     let textContainer = document.createElement('div');
+    const codeFormSection = document.getElementById('codeFormSection')
     textContainer.textContent = "Översatt text: " + morseCode.contents.text;
 
-    mainContent.appendChild(textContainer) // add translated text to a new div.
+    codeFormSection.appendChild(textContainer) // add translated text to a new div.
   })
   .catch((error) => {
     console.error("Error:", error);

@@ -7,18 +7,34 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-        <main id="main-content">
-            <form action="code.html" method="get">
-                <button type="button" id="generate-button">Generera en morsning?</button>
-                <input type="text" name="translateToMorse" id="translateToMorse" maxlength="25">
-                <p class="counter" id="charCounter">0/25</p>
-                <button type="submit" id="submit-button">Översätt!</button>
-            </form>
-        </main>
+    <header>
+        <h1 id="headline">Morsning</h1>
+
+    </header>
+
+    <section id="main-content">
+        <article id="sun">
+
+        </article>
+        
+    </section>
+    <section id="formSection">
+        <form action="code.html" method="get">
+            <article class="form-wrapper">
+            <button type="button" id="generate-button">Generera en morsning?</button>
+            <input type="text" name="translateToMorse" id="translateToMorse" maxlength="25">
+            <p id="charCounter">0/25</p>
+            <button type="submit" id="submit-button">Översätt!</button>
+            </article>
+        </form>
+    </section>
+    <footer>
+        
+    </footer>            
     <script src="index.js"></script>
 </body>
 </html>
