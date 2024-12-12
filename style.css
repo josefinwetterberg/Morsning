@@ -25,6 +25,17 @@ body {
   overflow: hidden;
 }
 
+@media screen and (min-width: 768px) {
+
+  body {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr auto;
+    gap: 20px;
+  }
+
+  
+}
+
 header {
 display: flex;
 justify-content: center;
@@ -33,11 +44,24 @@ color: var(--white);
 font-size: 10vw;
 }
 
+@media screen and (min-width: 768px) {
+  header {
+    grid-column: 2 / 7;
+    font-size: 3rem;
+  }
+}
+
 #main-content, #mainMorse {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  #main-content, #mainMorse {
+    grid-column: 7 / 12;
+  }
 }
 
 #sun, #code-sun {
@@ -53,6 +77,16 @@ font-size: 10vw;
   justify-content: center;
   align-items: center;
   color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  #sun, #code-sun {
+    grid-column: 7/12;
+    width: 100%;
+    aspect-ratio: 1;
+    max-height: auto;
+    min-height: auto;
+  }
 }
 
 .morse-text {
@@ -90,6 +124,14 @@ font-size: 10vw;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+@media screen and (min-width: 768px) {
+  #formSection, #codeFormSection {
+  grid-column: 1/13;
+  grid-row: 2/3;
+  grid-template-rows: repeat(3, 0.5fr);
+}
+}
+
 .form-wrapper {
   display: grid;
   grid-template-rows: 1fr repeat(4, auto) 1fr;
@@ -97,11 +139,26 @@ font-size: 10vw;
   gap: 0.5rem;
 }
 
+@media screen and (min-width: 768px) {
+  form {
+    grid-row: 2/3;
+  }
+}
+
 footer {
   grid-row: 4 / 5;
   background: var(--sea);
   color: var(--white);
 }
+
+@media screen and (min-width: 768px) {
+  footer {
+    grid-column: 1/13;
+    grid-row: 2/3;
+    display: flex;
+  }
+}
+
 form {
   grid-column: 2/3;
   display: flex;
@@ -166,4 +223,7 @@ button, #charCounter, #try-again {
   align-items: center;
   grid-row: 3 / 4;
   color: var(--white);
+  padding: 3rem 0;
+  gap: 1rem;
+
 }
