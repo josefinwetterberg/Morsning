@@ -11,7 +11,6 @@ let morseUrl = "https://api.funtranslations.com/translate/morse.json?text="+mors
     return response.json();
   })
   .then((json) => {
-    console.log(json);
     const morseCode = json; 
     const mainContent = document.getElementById('code-sun');
 

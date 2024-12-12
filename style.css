@@ -33,15 +33,14 @@ body {
     gap: 20px;
   }
 
-  
 }
 
 header {
-display: flex;
-justify-content: center;
-align-items: center;
-color: var(--white);
-font-size: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 10vw;
 }
 
 @media screen and (min-width: 768px) {
@@ -81,23 +80,10 @@ font-size: 10vw;
 
 @media screen and (min-width: 768px) {
   #sun, #code-sun {
-    grid-column: 7/12;
     width: 100%;
     aspect-ratio: 1;
-    max-height: auto;
     min-height: auto;
   }
-}
-
-.morse-text {
-  border-radius: 50%;
-  height: 55%;
-  aspect-ratio: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 6vw;
-  text-align: center;
 }
 
 #code-sun {
@@ -115,6 +101,28 @@ font-size: 10vw;
   
 }
 
+
+.morse-text {
+  border-radius: 50%;
+  height: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .morse-text {
+  font-size: 1.5rem;
+  text-wrap: pretty;
+  
+}
+}
+
+
 #formSection, #codeFormSection {
   background: var(--sea);
   margin: 0 -20px 0 -20px;
@@ -126,10 +134,10 @@ font-size: 10vw;
 
 @media screen and (min-width: 768px) {
   #formSection, #codeFormSection {
-  grid-column: 1/13;
-  grid-row: 2/3;
-  grid-template-rows: repeat(3, 0.5fr);
-}
+    grid-column: 1/13;
+    grid-row: 2/3;
+    grid-template-rows: repeat(3, 0.5fr);
+  }
 }
 
 .form-wrapper {
@@ -168,7 +176,6 @@ form {
 }
 
 button, #charCounter, #translateToMorse {
-  
   height: fit-content;
   font-size: 1.25rem;
 }
@@ -204,10 +211,6 @@ button, #charCounter, #try-again {
   grid-row: 4/5;
 }
 
-#charCounter .warning {
-  background: var(--action);
-}
-
 #submit-button, #try-again {
   background: var(--action);
   color: var(--white);
@@ -223,7 +226,8 @@ button, #charCounter, #try-again {
   align-items: center;
   grid-row: 3 / 4;
   color: var(--white);
-  padding: 3rem 0;
+  padding: 3rem 20px;
   gap: 1rem;
+  text-wrap:pretty;
 
 }

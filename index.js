@@ -1,4 +1,4 @@
-document.getElementById('generate-button').addEventListener('click', async () => {
+document.getElementById('generate-button').addEventListener('click', async () => { // generate hello from api
 
   let helloUrl = "https://api.datamuse.com/words?ml=hello&max=8";
 
@@ -7,7 +7,6 @@ document.getElementById('generate-button').addEventListener('click', async () =>
       return response.json();
   })
   .then((json) => {
-      console.log(json);
       const generatedHellos = json; 
 
       let i = Math.floor(Math.random() * generatedHellos.length);
@@ -20,8 +19,11 @@ document.getElementById('generate-button').addEventListener('click', async () =>
   .catch((error) => {
       console.error("Error:", error);
   })
-}) // generate hello function
+})
 
+
+function remainingChar () { // character remaining function
+  
 
 const inputField = document.getElementById('translateToMorse');
 const charCounter = document.getElementById('charCounter');
@@ -30,11 +32,9 @@ const maxLength = inputField.maxLength;
     inputField.addEventListener('input', () => {
       const remaining = maxLength - inputField.value.length;
       charCounter.textContent = `${remaining}/${maxLength}`;
+    }) 
+    
+  }
 
-      if (remaining <= 10) {
-        charCounter.classList.add('warning');
-      } else {
-        charCounter.classList.remove('warning');
-      }
-    }) // character remaining function
 
+remainingChar ()
