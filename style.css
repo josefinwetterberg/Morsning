@@ -177,7 +177,7 @@ form {
 
 button, #charCounter, #translateToMorse {
   height: fit-content;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 button, #charCounter, #try-again {
