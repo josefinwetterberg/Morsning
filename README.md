@@ -26,4 +26,4 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 ## Contact 
 If you have any questions or feedback, feel free to reach out to me:
 
-Email: josefin.wetterberg@gmail.com GitHub: Josefinx
+Email: josefin.wetterberg@gmail.com GitHub: josefinwetterberg
